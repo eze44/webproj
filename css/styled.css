@@ -1,0 +1,351 @@
+html {
+  scroll-behavior: smooth;
+}
+.owl-carousel .owl-nav .owl-prev i, .owl-carousel .owl-nav .owl-next i  {
+  font-size: 70px !important;
+}
+.dropdown > .nav-link {
+  font-size: 16px !important;
+}
+.overlay-menu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  background-color: #0d1128;  
+  background-color: rgba(13, 17, 40, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: absolute;
+  top: 11%;
+  width: 100%;
+  margin-top: 30px;
+  padding-left: 70px;
+  right: 0;
+}
+
+.overlay-menu a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+.responsive__item a{
+  border-bottom: 1px solid #eee;
+}
+.overlay-menu a:hover, .overlay-menu a:focus {
+  color: #f1f1f1;
+}
+
+.overlay-menu .closebtn {
+  position: absolute;
+  top: -7px;
+  right: 5px;
+  font-size: 60px;
+}
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    display: none;
+    text-decoration: none;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    background: rgba(0, 0, 0, .7);
+    z-index: 99;
+    cursor: pointer;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out
+}
+
+#return-to-top svg {
+    position: relative;
+    left: 15px;
+    top: 15px;
+    margin: 0;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out
+}
+
+#return-to-top:hover {
+    background: rgba(0, 0, 0, .9)
+}
+
+#return-to-top:hover svg {
+    top: 5px
+}
+@media screen and (max-height: 450px) {
+  .overlay-menu a {font-size: 20px}
+  .overlay-menu .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+.open__nav-btn{
+    font-size:30px;
+    cursor:pointer;
+    position: absolute;
+    right: 0;
+    display:none;
+  }
+.responsive__dropdown-items{
+  display: none;
+  padding-left: 40px;
+}
+.responsive__nav{
+  list-style: none;
+  padding: 0;
+}
+.header__logo{
+  padding-top: 35px;
+}
+@media screen and (max-width: 450px) {
+   #return-to-top {
+        bottom: 10px;
+        right: 10px;
+        width: 40px;
+        height: 40px
+    }
+    #return-to-top svg {
+        left: 11px;
+        top: 10px
+    }
+  .navbar{
+    display: none;
+  }
+  .open__nav-btn{
+    display: block;
+  }
+  .header__logo{
+   padding-top: 0;
+  }
+}
+.body__responsive{
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}
+.relatedarticles__img{
+  height: 200px !important;
+}
+.slider-item span{
+  color:#fff !important;
+}
+
+.login__form input[type=text], .login__form input[type=password], .login__form input[type=email] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.login__form input[type=text]:focus, .login__form input[type=password]:focus, .login__form input[type=email]:focus {
+  border: none;
+  border-bottom: 2px solid #d2691e;
+  outline: none;
+}
+.login__form input[type=checkbox] { 
+  border: #d2691e;
+} 
+/* Set a style for all buttons */
+.open__form-box{
+  margin-top: 25px;
+  text-align: right;
+}
+.open__form {
+  background-color: #9acd32;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: 1px solid #9acd32;
+  border-radius: 40px;
+  cursor: pointer;
+  width: 50%;
+}
+.open__form:hover{ 
+  outline: none;
+  background: transparent;
+  color: #9acd32;
+}
+.login__btn{
+  background-color: #9acd32;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  margin: 6px auto;
+  display: block;
+  border-radius: 40px;
+}
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #d2691e;
+  color: white;
+  border: none;
+  cursor: pointer;
+  float: right;
+  border-radius: 40px;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+/*.container {
+  padding: 16px;
+}*/
+
+span.psw {
+  /*float: right;*/
+  padding-top: 16px;
+}
+.psw a{
+  color: #d2691e;
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 99; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  /*padding-top: 60px;*/
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 120%; /* Could be more or less, depending on screen size */
+  padding: 10px;
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+.open__form-res{
+  display: none;
+}
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+.padd_top-tf{
+  padding-top: 15px;
+}
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 450px) {
+  #return-to-top{
+    display: none !important;
+  }
+  .padd_top-tf{
+    padding-top: 0;
+  }
+  .center__item{
+    margin:0 auto;
+  }
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+  .modal-content{
+    width:100%;
+  }
+  .open__form-box{
+    margin:0;
+    display: none;
+  }
+  .open__form {
+    margin:8px 30px;
+  }
+  .open__form-res{
+    display: block;
+  }
+  ul.map-list{
+    /* display: none; */
+    font-size: 14px;
+  }
+}
+.map__btn{
+  width: 100%;
+}
+.ada-logo-footer{
+  background: #fff;
+  width: fit-content;
+  margin-bottom: 8px;
+}
+.modal-backdrop{
+  z-index: 9;
+}
+.ftco-footer .ftco-footer-widget .btn-primary{
+  background-color: #e61919 !important;
+  border:2px solid transparent !important;
+}
+.ftco-footer .ftco-footer-widget .btn-primary:hover{
+  background-color: #fff !important;
+  color: #e61919 ;
+}
