@@ -9,12 +9,15 @@
         <input type="text" class="form-control pl-3" placeholder="Search">
       </div>
     </form>
+    <form action="#" class="order-lg-last">
+      <a href="/login.php" type="button" class="btn btn-primary">Login</a>
+    </form>
     <div class="collapse navbar-collapse" id="ftco-nav">
       <?php
         $page = $_SERVER['REQUEST_URI'];
       ?>
       <ul class="navbar-nav mr-auto">
-        <div class="dropdown <?php echo ($page == "/index.php") ? "active" : "" ?> home-nav">
+        <div class="dropdown <?php echo ($page == "/index.php" || $page == "/") ? "active" : "" ?> home-nav">
           <a href="index.php" class="nav-link">Home</a>
           <div class="dropdown-content"></div>
         </div>
