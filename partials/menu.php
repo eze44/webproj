@@ -10,24 +10,27 @@
       </div>
     </form>
     <div class="collapse navbar-collapse" id="ftco-nav">
+      <?php
+        $page = $_SERVER['REQUEST_URI'];
+      ?>
       <ul class="navbar-nav mr-auto">
-        <div class="dropdown active home-nav">
+        <div class="dropdown <?php echo ($page == "/index.php") ? "active" : "" ?> home-nav">
           <a href="index.php" class="nav-link">Home</a>
           <div class="dropdown-content"></div>
         </div>
         </li>
 
-        <div class="dropdown about-nav">
+        <div class="dropdown about-nav <?php echo ($page == "/about.php") ? "active" : "" ?>">
           <a href="about.php" class="nav-link">About us</a>
         </div>
         </li>
-        <div class="dropdown action-nav">
+        <div class="dropdown action-nav <?php echo ($page == "/team.php") ? "active" : "" ?>">
           <a href="team.php" class="nav-link">Authors</a>
         </div>
         </li>
         </li>
         </li>
-        <div class="dropdown about-nav">
+        <div class="dropdown about-nav <?php echo ($page == "/news.php") ? "active" : "" ?>">
           <a href="news.php" class="nav-link">Resources</a>
           <div class="dropdown-content"></div>
         </div>
