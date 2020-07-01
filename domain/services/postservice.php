@@ -38,11 +38,16 @@
                 left join authors as a on a.id = p.author_id
                 order by p.created_at desc
                 limit $limit offset $offset";
-      } else {
+      } else if($_SESSION["role"] == Role::$USER_ROLE) {
         $user_id = $_SESSION["user_id"];
         $sql = "SELECT p.*, a.id as author_id, a.first_name, a.last_name, a.email FROM posts as p
                 left join authors as a on a.id = p.author_id
                 where author_id = $user_id
+                order by p.created_at desc
+                limit $limit offset $offset";
+      } else {
+        $sql = "SELECT p.*, a.id as author_id, a.first_name, a.last_name, a.email FROM posts as p
+                left join authors as a on a.id = p.author_id
                 order by p.created_at desc
                 limit $limit offset $offset";
       }
