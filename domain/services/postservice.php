@@ -27,6 +27,29 @@
       return $posts;
     }
 
+    public function search($page, $take = null, $search) {
+      $offset = 0;
+      $limit = ($take != null) ? $take : 3;
+      if ($page > 1)
+        $offset = ($limit * $page) - $limit;
+
+      $sql = "SELECT p.*, a.id as author_id, a.first_name, a.last_name, a.email FROM posts as p
+              left join authors as a on a.id = p.author_id
+              where p.title like '%". $search . "%'
+              order by p.created_at desc
+              limit $limit offset $offset";
+
+      $result = $this->db->query($sql);
+      $posts = [];
+      if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+          $p = new Post();
+          $posts[] = $p->withRow($row);
+        }
+      }
+      return $posts;
+    }
+
     public function paginate($page, $take = null) {
       $offset = 0;
       $limit = ($take != null) ? $take : 3;

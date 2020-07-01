@@ -4,9 +4,9 @@
       aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="oi oi-menu"></span> Menu
     </button>
-    <form action="#" class="searchform order-lg-last">
+    <form action="search.php" class="searchform order-lg-last">
       <div class="form-group">
-        <input type="text" class="form-control pl-3" placeholder="Search">
+        <input type="text" name="search" class="form-control pl-3" placeholder="Search">
       </div>
     </form>
     <form action="#" class="order-lg-last">
