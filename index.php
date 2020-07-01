@@ -116,7 +116,7 @@
 								<h3 class="heading"><a href="#"><?php echo $res->title; ?></a></h3>
 								<p>Corporate publication</p>
 								<div class="d-flex align-items-center mt-4">
-									<p class="mb-0"><a href="#" class="btn btn-primary">PDF <span
+									<p class="mb-0"><a href="<?php echo "single.php?post_id=" . $res->id?>" class="btn btn-primary">More <span
 												class="ion-ios-arrow-round-forward"></span></a></p>
 								</div>
 							</div>
