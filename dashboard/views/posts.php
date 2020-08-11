@@ -31,7 +31,7 @@
             <th scope="row"><?php echo $p->id; ?></th>
             <td><?php echo $p->title; ?></td>
             <td><?php echo $p->author->getFullName(); ?></td>
-            <td><a class="btn btn-warning">Edit</a></td>
+            <td><a href="./views/editpost.php?post_id=<?php echo $p->id; ?>" class="btn btn-warning">Edit</a></td>
           </tr>
         <?php endforeach;?>
       </tbody>

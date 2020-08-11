@@ -113,6 +113,20 @@
 
       return $this->db->query($sql);
     }
+
+    public function update($data) {
+      $dt = new DateTime($item->pubDate);
+      $created_at = $dt->format('Y-m-d H:i:s');
+
+      $id = $data["id"];
+      $title = $data["title"];
+      $content = base64_encode($data["content"]);
+      $image_p = $data["image_path"];
+      $author_id = $data["author_id"];
+      $sql = "UPDATE posts set title = '$title', content = '$content' where id = '$id'";
+
+      return $this->db->query($sql);
+    }
   }
 
 
